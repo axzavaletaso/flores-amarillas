@@ -93,24 +93,18 @@
     </div>
 
     <script>
-      const correctPassword = "";
-      const display = document.getElementById("inputDisplay");
-      let input = "";
-      function enterDigit(digit) {
-        if (input.length < 8) {
-          input += digit;
-        }
-        display.textContent = input.padEnd(8, "•");
-        if (input.length === 8) {
-          if (input === correctPassword) {
-            window.location.href = "flower.html"; 
-          } else {
-            alert("Contraseña incorecta, intenta de nuevo");
-            input = "";
-            display.textContent = "";
-          }
-        }
-      }
-    </script>
-  </body>
+     const display = document.getElementById("inputDisplay");
+let input = "";
+
+function enterDigit(digit) {
+  if (input.length < 8) {
+    input += digit;
+  }
+  display.textContent = input.padEnd(8, "•");
+
+  // Al completar los 8 dígitos, redirige de inmediato
+  if (input.length === 8) {
+    window.location.href = "flower.html";
+  }
+}
 </html>
