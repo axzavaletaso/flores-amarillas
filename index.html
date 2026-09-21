@@ -77,7 +77,7 @@
         Ingrese la contraseña 
         (DDMMAAAA):
       </h2>
-      <div class="input-display" id="inputDisplay">••••••••</div>
+      <div class="input-display" id="inputDisplay"></div>
       <div class="keypad">
         <button class="key" onclick="enterDigit('1')">1</button>
         <button class="key" onclick="enterDigit('2')">2</button>
@@ -107,7 +107,7 @@
           } else {
             alert("Contraseña incorecta, intenta de nuevo");
             input = "";
-            display.textContent = "••••••••";
+            display.textContent = "";
           }
         }
       }
