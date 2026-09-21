@@ -91,20 +91,19 @@
         <button class="key" onclick="enterDigit('0')">0</button>
       </div>
     </div>
+<script>
+  const display = document.getElementById("inputDisplay");
+  let input = "";
 
-    <script>
-     const display = document.getElementById("inputDisplay");
-let input = "";
+  function enterDigit(digit) {
+    if (input.length < 8) {
+      input += digit;
+    }
+    display.textContent = input.padEnd(8, "•");
 
-function enterDigit(digit) {
-  if (input.length < 8) {
-    input += digit;
+    if (input.length === 8) {
+      window.location.href = "flower.html";
+    }
   }
-  display.textContent = input.padEnd(8, "•");
-
-  // Al completar los 8 dígitos, redirige de inmediato
-  if (input.length === 8) {
-    window.location.href = "flower.html";
-  }
-}
+</script>
 </html>
